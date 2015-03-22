@@ -14,39 +14,53 @@
 	</head>
 
 	<body>
-		<!-- The body is the entire vieweable area of the webpage.
-		For example we can see the text, links, images, and media -->
+		<header>
+			<h1>Exceptional</h1>
+			<h2>Realty Group</h2>
 
-		<h1>Exceptional</h1>
-		<h2>Realty Group</h2>
+			<nav>
+				<!-- links -->
+				<a href="index.html">About</a>
+				<a href="new-properties.html">New Properties</a>
+				<a href="real-estate-listings.html">Listings</a>
+				<a href="market-report.html">Market Report</a>
+				<a href="contact.html">Contact</a>
+				<a href="http://hud.gov" target="_blank">H.U.D.</a>
+			</nav>
+		</header>
 
-		<!-- links -->
-		<a href="index.html">About</a>
-		<a href="new-properties.html">New Properties</a>
-		<a href="real-estate-listings.html">Listings</a>
-		<a href="market-report.html">Market Report</a>
-		<a href="contact.html">Contact</a>
-		<a href="http://hud.gov" target="_blank">H.U.D.</a>
+		<section id="featured-property">
+			<figure>
+				<img src="images/intro-pic.jpg" alt="A beautiful living room" title="Welcome to Exceptional Realty Group">
+				<figcaption>345 Carl Street Apt 12, Carrol Rd. Brooklyn - Photo by Denise Richards</figcaption>
+			</figure>
 
-		<img src="images/intro-pic.jpg" alt="A beautiful living room" title="Welcome to Exceptional Realty Group">
+			<!--
+			foldername/ = go inside the folder
+			filename = use a file in the current directory
+			../ = leave the current folder and go up to the parent directory
+			-->
 
-		<!--
-		foldername/ = go inside the folder
-		filename = use a file in the current directory
-		../ = leave the current folder and go up to the parent directory
-		-->
+			<p>Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit. Expedita deleniti dicta corporis magnam eum suscipit fugit, placeat voluptates ex tenetur, quos atque quae ut animi ad, saepe cupiditate quia ducimus.</p>
 
-		<p>Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit. Expedita deleniti dicta corporis magnam eum suscipit fugit, placeat voluptates ex tenetur, quos atque quae ut animi ad, saepe cupiditate quia ducimus.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quibusdam eaque labore at sed ullam, necessitatibus aperiam, vero odio veritatis illo illum exercitationem! Quasi maxime iure explicabo vitae incidunt ea!</p>
+		</section>
 
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quibusdam eaque labore at sed ullam, necessitatibus aperiam, vero odio veritatis illo illum exercitationem! Quasi maxime iure explicabo vitae incidunt ea!</p>
+		<section id="promotional">
+			<!-- promo video -->
+			<figure>
+				<video controls>
+					<source src="videos/real-estate.mp4" type="video/mp4">
+					<source src="videos/real-estate.ogv" type="videos/ogg">
+					Your browser does not support HTML5 Video.  <a href="http://browsehappy.com" target="_blank">Please upgrade your browser</a>.
+				</video>
+				<figcaption>Exceptional Realty Group Promotional Video - Source: archive.org</figcaption>
+			</figure>
+		</section>
 
-		<!-- promo video -->
-
-		<video controls>
-			<source src="videos/real-estate.mp4" type="video/mp4">
-			<source src="videos/real-estate.ogv" type="videos/ogg">
-			Your browser does not support HTML5 Video.  <a href="http://browsehappy.com" target="_blank">Please upgrade your browser</a>.
-		</video>
+		<footer>
+			&copy; 2015 Exceptional Realty.  All Rights Reserved.
+		</footer>
 
 	</body>
 </html>
