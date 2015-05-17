@@ -29,7 +29,7 @@
         <div class="wrapper">
             <nav class="clearfix">
               <a class="menu-icon">&#9776;</a>
-              <div id="menu-links"><a href="index.html">About</a><a href="new-properties.html">New Properties</a><a href="real-estate-listings.html">Listings</a><a href="market-report.html">Market Report</a><a class="selected" href="contact.html">Contact</a><a href="http://hud.gov" target="_blank">H.U.D.</a></div>
+              <div id="menu-links"><a href="index.html">About</a><a href="new-properties.html">New Properties</a><a href="real-estate-listings.html">Listings</a><a href="market-report.html">Market Report</a><a class="selected" href="contact.php">Contact</a><a href="http://hud.gov" target="_blank">H.U.D.</a></div>
             </nav>
         </div><!-- .wrapper -->
       </div><!-- #navbar -->
@@ -38,26 +38,37 @@
     <div class="wrapper clearfix">
 
       <section class="col-2 first shadow">
-        <!-- Contact Form -->
-        <form action="#" method="post">
 
-          <label for="fullname">Name</label>
-          <span id="fullname-error" class="error">must be more than two characters.</span>
-          <input type="text" id="fullname" name="fullname" placeholder="your name">
+          <?php if ($_GET['s'] == 'success') { ?>
+            <p> Thank you.  Your message has been sent successfully!</p>
+          <?php } else if ($_GET['s'] == 'error') { ?>
+            <p> Error. Your message was not sent! Make sure you type in the proper verification numbers. <a href="contact.php">Click here to try again.</a>  If issues persist please send and email to the site admin (site admin email here).</p>
+          <?php } else { ?>
+          <!-- Contact Form -->
+          <form action="mailer.php" method="post">
 
-          <label for="email">Email</label>
-          <span id="email-error" class="error">must be a valid email.</span>
-          <input type="text" id="email" name="email" placeholder="your email">
-          
-          <label for="phone">Phone</label>
-          <input type="tel" id="phone" name="phone" placeholder="your phone (optional)">
-          
-          <label for="message">Message</label>
-          <span id="message-error" class="error">can not be left blank.</span>
-          <textarea id="message" name="message" rows="10"></textarea>
-          
-          <input type="submit" value="send">
-        </form>
+            <label for="fullname">Name</label>
+            <span id="fullname-error" class="error">must be more than two characters.</span>
+            <input type="text" id="fullname" name="fullname" placeholder="your name">
+
+            <label for="email">Email</label>
+            <span id="email-error" class="error">must be a valid email.</span>
+            <input type="text" id="email" name="email" placeholder="your email">
+            
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="your phone (optional)">
+            
+            <label for="message">Message</label>
+            <span id="message-error" class="error">can not be left blank.</span>
+            <textarea id="message" name="message" rows="8"></textarea>
+            <input type="text" name="verify" class="verify-box" placeholder="verify you're human">
+
+            <img class="verify-image" src="verificationimage.php?<?php echo rand(0.9999)?>" alt="verification image">
+
+            <input type="submit" value="send">
+          </form>
+        <?php } ?>
+
       </section>
 
       <section class="col-1 shadow">
